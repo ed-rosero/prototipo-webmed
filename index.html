@@ -57,7 +57,7 @@
         .view-container.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* ====== COMPONENTES ORIGINALES DE TU DISEÑO INICIO ====== */
+        /* COMPONENTES */
         .welcome-banner { background: linear-gradient(135deg, var(--primary), #1a6f93); color: white; padding: 25px 30px; border-radius: var(--border-radius); display: flex; align-items: center; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(11, 79, 108, 0.15); }
         .welcome-banner h1 { margin: 0; font-size: 22px; font-weight: 700; text-transform: uppercase;}
         .panel-full { background: var(--card-bg); padding: 25px; border-radius: var(--border-radius); box-shadow: var(--shadow); border: 1px solid #eee; margin-bottom: 25px; }
@@ -69,7 +69,7 @@
         .news-list li { padding: 15px; border-radius: 8px; background: #f9f9f9; color: var(--text-dark); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #f0f0f0;}
         .feedback-row { display: flex; gap: 15px; }
         
-        .card { background: var(--card-bg); padding: 25px; border-radius: var(--border-radius); box-shadow: var(--shadow); border: 1px solid #eee; display: flex; align-items: flex-start; gap: 20px; transition: var(--transition); cursor: pointer;}
+        .card { background: var(--card-bg); padding: 25px; border-radius: var(--border-radius); box-shadow: var(--shadow); border: 1px solid #eee; display: flex; align-items: flex-start; gap: 20px; transition: 0.3s; cursor: pointer;}
         .card:hover { transform: translateY(-5px); border-color: var(--primary-light); box-shadow: var(--shadow-hover); }
         .card-icon { font-size: 30px; color: var(--primary-light); background: rgba(1, 186, 239, 0.1); width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
         .card-alert { color: var(--alert); background: rgba(214, 34, 70, 0.1); }
@@ -80,7 +80,6 @@
         .status-tag { display: inline-block; padding: 5px 12px; background: #e0f8e9; color: var(--success); font-weight: bold; font-size: 11px; border-radius: 12px; margin-top: 10px;}
         .status-tag.pending { background: #fff4e5; color: var(--warning); }
         
-        /* ====== CLASES ADICIONALES PARA LAS VISTAS PREMIUM ====== */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;}
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 25px; }
         
@@ -93,28 +92,24 @@
         .btn-primary:hover { background: var(--primary-light); }
         .btn-alert { background: var(--alert); color: white; border: none; padding: 10px 15px; border-radius: 8px; font-weight: 600; font-size: 12px; cursor: pointer; transition: 0.3s; margin-top: 15px; width: 100%;}
         
-        /* Citas Time Chips */
         .time-selector { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;}
         .time-chip { padding: 8px 15px; border: 1px solid #ddd; border-radius: 20px; font-size: 13px; cursor: pointer; color: var(--text-muted); font-weight: 500; transition: 0.2s;}
         .time-chip:hover { border-color: var(--primary-light); color: var(--primary); }
         .time-chip.selected { background: var(--primary-light); color: white; border-color: var(--primary-light); }
 
-        /* Doctor Directory Card */
         .doctor-card { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 25px; background: white; border-radius: var(--border-radius); border: 1px solid #eee; box-shadow: var(--shadow); transition: 0.3s;}
         .doctor-card:hover { transform: translateY(-5px); border-color: var(--primary-light); }
         .doc-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f0f0; }
         .doc-rating { color: #F5A623; font-size: 12px; }
 
-        /* Insurance ID Card */
         .insurance-id { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px; border-radius: 16px; box-shadow: 0 15px 30px rgba(30, 60, 114, 0.3); position: relative; overflow: hidden; max-width: 450px; margin-bottom: 25px;}
         .insurance-id::after { content: ''; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: rgba(255,255,255,0.05); transform: rotate(45deg); }
         .ins-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-        .ins-header i { font-size: 30px; color: #d4af37; } /* Chip icon style */
+        .ins-header i { font-size: 30px; color: #d4af37; } 
         .ins-number { font-family: monospace; font-size: 22px; letter-spacing: 2px; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);}
         .ins-details { display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
         .ins-details strong { display: block; font-size: 15px; color: white; margin-top: 5px; }
 
-        /* Health A-Z Cards */
         .health-topic { background: white; border: 1px solid #eee; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow); cursor: pointer; transition: 0.3s;}
         .health-topic:hover { box-shadow: var(--shadow-hover); }
         .health-img { width: 100%; height: 120px; background: #e0f0f5; display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--primary-light);}
@@ -122,7 +117,7 @@
 
         /* AUTH OVERLAY */
         #auth-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: linear-gradient(135deg, var(--primary), #1a6f93); display: flex; align-items: center; justify-content: center; z-index: 9999; }
-        .auth-box { background: var(--card-bg); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 100%; max-width: 450px; text-align: center; }
+        .auth-box { background: var(--card-bg); padding: 40px; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 100%; max-width: 450px; text-align: center; max-height: 90vh; overflow-y: auto;}
         .auth-logo { font-size: 28px; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
         .auth-logo i { color: var(--primary-light); }
         .auth-view-content { display: none; animation: fadeIn 0.4s; }
@@ -147,21 +142,51 @@
                     <input type="password" id="login-pass" class="feedback-input" placeholder="••••••••">
                 </div>
                 <button class="btn-primary" style="width: 100%; margin-top: 10px;" onclick="procesarLogin()">Ingresar al sistema</button>
+                <p style="margin-top: 15px; font-size: 13px; text-align: center;">
+                    <a href="#" onclick="toggleAuth('auth-recovery')" style="color: var(--text-muted); text-decoration: underline;">¿Olvidaste tu contraseña? Recuperar aquí</a>
+                </p>
                 <p style="margin-top: 20px; font-size: 13px; color: var(--text-muted); text-align: center;">¿No tienes cuenta? <a href="#" onclick="toggleAuth('auth-register')" style="color: var(--primary-light); font-weight: 600; text-decoration: none;">Regístrate aquí</a></p>
+            </div>
+
+            <div id="auth-recovery" class="auth-view-content">
+                <p style="color: var(--text-muted); margin-bottom: 25px; text-align: center;">Recupera el acceso a tu cuenta</p>
+                <div class="form-group">
+                    <label>Ingresa tu correo electrónico</label>
+                    <input type="email" id="recovery-email" class="feedback-input" placeholder="ejemplo@correo.com">
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 10px;" onclick="procesarRecuperacion()">Enviar enlace de recuperación</button>
+                <p style="margin-top: 20px; font-size: 13px; text-align: center;">
+                    <a href="#" onclick="toggleAuth('auth-login')" style="color: var(--text-muted); font-weight: 600; text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Volver a iniciar sesión</a>
+                </p>
             </div>
 
             <div id="auth-register" class="auth-view-content">
                 <p style="color: var(--text-muted); margin-bottom: 20px; text-align: center;">Crea tu cuenta de paciente</p>
+                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <div class="form-group"><label>Nombre Completo</label><input type="text" id="reg-name" class="feedback-input" placeholder="Ej. Carlos Pérez"></div>
                     <div class="form-group"><label>Identificación</label><input type="text" class="feedback-input" placeholder="CC o Pasaporte"></div>
                 </div>
-                <div class="form-group"><label>Teléfono Móvil</label><input type="tel" class="feedback-input" placeholder="300 000 0000"></div>
-                <div class="form-group"><label>Correo Electrónico</label><input type="email" class="feedback-input" placeholder="ejemplo@correo.com"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group"><label>Fecha Nacimiento</label><input type="date" class="feedback-input"></div>
+                    <div class="form-group"><label>Teléfono Móvil</label><input type="tel" class="feedback-input" placeholder="300 000 0000"></div>
+                </div>
+                
+                <div class="form-group"><label>Dirección de Residencia</label><input type="text" class="feedback-input" placeholder="Ej. Calle 123 #45-67, Ciudad"></div>
+                
+                <div class="form-group"><label>Correo Electrónico</label><input type="email" id="reg-email" class="feedback-input" placeholder="ejemplo@correo.com"></div>
                 <div class="form-group"><label>Contraseña</label><input type="password" class="feedback-input" placeholder="Crea una contraseña segura"></div>
                 
                 <button class="btn-primary" style="width: 100%; margin-top: 10px;" onclick="procesarRegistro()">Crear Cuenta</button>
                 <p style="margin-top: 20px; font-size: 13px; color: var(--text-muted); text-align: center;">¿Ya tienes cuenta? <a href="#" onclick="toggleAuth('auth-login')" style="color: var(--primary-light); font-weight: 600; text-decoration: none;">Inicia sesión</a></p>
+            </div>
+
+            <div id="auth-success" class="auth-view-content" style="text-align: center;">
+                <div style="font-size: 60px; color: var(--success); margin-bottom: 15px;"><i class="fa-regular fa-circle-check"></i></div>
+                <h2 style="color: var(--primary); margin-top: 0; font-size: 22px;">¡Registro Exitoso!</h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 14px; line-height: 1.5;">Tu cuenta ha sido creada correctamente. Ya puedes acceder al portal usando tu correo electrónico y la contraseña que asignaste.</p>
+                <button class="btn-primary" style="width: 100%; font-size: 16px; padding: 15px;" onclick="toggleAuth('auth-login')"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ir a Iniciar Sesión</button>
             </div>
         </div>
     </div>
@@ -173,7 +198,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Buscar médicos, diagnósticos o sedes...">
             </div>
-            <div class="profile" onclick="navigate('view-config', null)">
+            <div class="profile" onclick="navigate('view-config', document.getElementById('menu-config'))">
                 <img src="" id="user-avatar" alt="Avatar">
                 <span id="user-name">Usuario</span>
                 <i class="fa-solid fa-chevron-down" style="font-size: 12px; color: var(--text-muted);"></i>
@@ -182,22 +207,27 @@
 
         <div class="app-body">
             <aside>
-                <div class="menu-item active" onclick="navigate('view-inicio', this)"><i class="fa-solid fa-house"></i> Inicio</div>
-                <div class="menu-item" onclick="navigate('view-citas', this)"><i class="fa-solid fa-calendar-check"></i> Mis Citas</div>
-                <div class="menu-item" onclick="navigate('view-salud', this)"><i class="fa-solid fa-book-medical"></i> Salud de la A a la Z</div>
-                <div class="menu-item" onclick="navigate('view-seguros', this)"><i class="fa-solid fa-shield-halved"></i> Planes de Seguro</div>
+                <div class="menu-item active" id="menu-inicio" onclick="navigate('view-inicio', this)"><i class="fa-solid fa-house"></i> Inicio</div>
+                <div class="menu-item" id="menu-citas" onclick="navigate('view-citas', this)"><i class="fa-solid fa-calendar-check"></i> Mis Citas</div>
                 
-                <div class="menu-item" onclick="navigate('view-recursos', this)"><i class="fa-solid fa-toolbox"></i> Recursos de Salud</div>
+                <div class="menu-item" id="menu-ordenes" onclick="navigate('view-ordenes', this)"><i class="fa-solid fa-file-prescription"></i> Órdenes Médicas</div>
+                
+                <div class="menu-item" id="menu-salud" onclick="navigate('view-salud', this)"><i class="fa-solid fa-book-medical"></i> Salud de la A a la Z</div>
+                <div class="menu-item" id="menu-seguros" onclick="navigate('view-seguros', this)"><i class="fa-solid fa-shield-halved"></i> Planes de Seguro</div>
+                
+                <div class="menu-item" style="pointer-events: none; color: var(--primary);"><i class="fa-solid fa-toolbox"></i> Recursos de Salud</div>
                 <div class="submenu">
-                    <div class="menu-item" onclick="navigate('view-recursos', document.querySelectorAll('.menu-item')[4])"><i class="fa-solid fa-calculator"></i> Calculadora Salud</div>
-                    <div class="menu-item" onclick="navigate('view-recursos', document.querySelectorAll('.menu-item')[4])"><i class="fa-solid fa-user-doctor"></i> Buscar Médicos</div>
+                    <div class="menu-item" id="menu-calculadora" onclick="navigate('view-calculadora', this)"><i class="fa-solid fa-calculator"></i> Calculadora Salud</div>
+                    <div class="menu-item" id="menu-directorio" onclick="navigate('view-directorio', this)"><i class="fa-solid fa-user-doctor"></i> Buscar Médicos</div>
                 </div>
                 
-                <div class="menu-item" onclick="navigate('view-comentarios', this)"><i class="fa-solid fa-comments"></i> Comentarios</div>
-                
+                <div class="menu-item" id="menu-comentarios" onclick="navigate('view-comentarios', this)"><i class="fa-solid fa-comments"></i> Comentarios</div>
+                <div class="menu-item" id="menu-ambulancia" style="color: var(--alert); font-weight: bold;" onclick="navigate('view-ambulancia', this)"><i class="fa-solid fa-truck-medical"></i> Ambulancia</div>
+                <div class="menu-item" id="menu-noticias" onclick="navigate('view-noticias', this)"><i class="fa-regular fa-newspaper"></i> Noticias</div>
+
                 <div class="sidebar-spacer"></div>
                 
-                <div class="menu-item" onclick="navigate('view-config', this)"><i class="fa-solid fa-gear"></i> Configuración</div>
+                <div class="menu-item" id="menu-config" onclick="navigate('view-config', this)"><i class="fa-solid fa-gear"></i> Configuración</div>
                 <div class="menu-item" style="color: var(--alert);" onclick="cerrarSesion()"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</div>
             </aside>
 
@@ -207,42 +237,43 @@
                     <div class="welcome-banner"><h1 id="banner-title">BIENVENIDO, USUARIO 👋</h1></div>
                     
                     <div class="dashboard-grid">
-                        <div class="card" style="grid-column: 1; grid-row: 1;" onclick="navigate('view-citas', document.querySelectorAll('.menu-item')[1])">
+                        <div class="card" style="grid-column: 1; grid-row: 1;" onclick="navigate('view-citas', document.getElementById('menu-citas'))">
                             <div class="card-icon"><i class="fa-solid fa-calendar-plus"></i></div>
                             <div class="card-content">
                                 <h3>AGENDAR CITA</h3><p>Especialidad, medico, fecha</p>
                             </div>
                         </div>
                         
-                        <div class="card" style="grid-column: 2; grid-row: 1;" onclick="navigate('view-seguros', document.querySelectorAll('.menu-item')[3])">
+                        <div class="card" style="grid-column: 2; grid-row: 1;" onclick="navigate('view-seguros', document.getElementById('menu-seguros'))">
                             <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
                             <div class="card-content">
                                 <h3>MI SEGURO / EPS</h3><p>Plan: Contributivo</p><span class="status-tag">Estado: ACTIVO</span>
                             </div>
                         </div>
 
-                        <div class="card" style="grid-column: 1; grid-row: 2;">
-                            <div class="card-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                        <div class="card" style="grid-column: 1; grid-row: 2;" onclick="navigate('view-ordenes', document.getElementById('menu-ordenes'))">
+                            <div class="card-icon"><i class="fa-solid fa-file-prescription"></i></div>
                             <div class="card-content">
-                                <h3>MIS RECETAS</h3><p>Ver órdenes médicas vigentes</p>
+                                <h3>ÓRDENES MÉDICAS</h3><p>Ver medicamentos y exámenes</p>
                             </div>
                         </div>
 
-                        <div class="card" style="border: 1px solid rgba(214, 34, 70, 0.3); grid-column: 2; grid-row: 2;">
+                        <div class="card" style="border: 1px solid rgba(214, 34, 70, 0.3); grid-column: 2; grid-row: 2; cursor: pointer;" onclick="navigate('view-ambulancia', document.getElementById('menu-ambulancia'))">
                             <div class="card-icon card-alert"><i class="fa-solid fa-truck-medical"></i></div>
                             <div class="card-content">
                                 <h3 style="color: var(--alert);">EMERGENCIAS</h3><p style="font-weight: 600; color: var(--text-dark);">BOTÓN DE PÁNICO</p>
-                                <button class="btn-alert" onclick="pedirAmbulancia()">SOLICITAR AMBULANCIA</button>
+                                <button class="btn-alert" onclick="event.stopPropagation(); navigate('view-ambulancia', document.getElementById('menu-ambulancia'))">IR A CENTRAL DE EMERGENCIAS</button>
                             </div>
                         </div>
 
                         <div class="panel-tall">
                             <div class="panel-header"><i class="fa-regular fa-newspaper"></i> NOTICIAS Y ACTUALIDAD</div>
                             <ul class="news-list" style="flex: 1; overflow-y: auto;">
-                                <li><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Nueva jornada de vacunación este fin de semana en sedes principales.</span></li>
-                                <li><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Tips para cuidar tu salud mental durante el teletrabajo.</span></li>
-                                <li><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Actualización en la red de farmacias afiliadas 2026.</span></li>
+                                <li style="cursor: pointer;" onclick="navigate('view-noticias', document.getElementById('menu-noticias'))"><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Nueva jornada de vacunación este fin de semana en sedes principales.</span></li>
+                                <li style="cursor: pointer;" onclick="navigate('view-noticias', document.getElementById('menu-noticias'))"><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Tips para cuidar tu salud mental durante el teletrabajo.</span></li>
+                                <li style="cursor: pointer;" onclick="navigate('view-noticias', document.getElementById('menu-noticias'))"><i class="fa-solid fa-chevron-right" style="color: var(--primary-light);"></i> <span>Actualización en la red de farmacias afiliadas 2026.</span></li>
                             </ul>
+                            <button class="btn-primary" style="margin-top: 15px; font-size: 12px; background: white; color: var(--primary); border: 1px solid var(--primary);" onclick="navigate('view-noticias', document.getElementById('menu-noticias'))">Ver todas las noticias</button>
                         </div>
                     </div>
 
@@ -255,20 +286,84 @@
                     </div>
                 </div>
 
+                <div id="view-ordenes" class="view-container">
+                    <div class="welcome-banner"><h1><i class="fa-solid fa-file-prescription"></i> Gestión de Órdenes Médicas</h1></div>
+                    
+                    <div class="grid-2">
+                        <div class="panel-full">
+                            <div class="panel-header"><i class="fa-solid fa-pills"></i> Fórmulas y Medicamentos</div>
+                            
+                            <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 10px;">
+                                    <div>
+                                        <h4 style="margin:0 0 5px 0; color: var(--primary);">Losartán Potásico 50mg</h4>
+                                        <p style="margin:0; font-size:12px; color:var(--text-muted);">Tomar 1 tableta cada 12 horas</p>
+                                    </div>
+                                    <span class="status-tag">Vigente</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #eee; padding-top: 10px; margin-top: 10px;">
+                                    <span style="font-size: 11px; color: var(--text-muted);">Dr. Roberto Méndez - 15 Mayo 2026</span>
+                                    <button class="btn-primary" style="padding: 5px 10px; font-size: 11px; background: white; color: var(--primary); border: 1px solid var(--primary);"><i class="fa-solid fa-download"></i> PDF</button>
+                                </div>
+                            </div>
+
+                            <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 10px;">
+                                    <div>
+                                        <h4 style="margin:0 0 5px 0; color: var(--primary);">Acetaminofén 500mg</h4>
+                                        <p style="margin:0; font-size:12px; color:var(--text-muted);">Tomar 1 tableta cada 8 hrs en caso de dolor</p>
+                                    </div>
+                                    <span class="status-tag" style="background:#f5f5f5; color:#888;">Finalizado</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #eee; padding-top: 10px; margin-top: 10px;">
+                                    <span style="font-size: 11px; color: var(--text-muted);">Dra. Sofía Castro - 10 Abril 2026</span>
+                                    <button class="btn-primary" style="padding: 5px 10px; font-size: 11px; background: white; color: var(--primary); border: 1px solid var(--primary);"><i class="fa-solid fa-download"></i> PDF</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-full">
+                            <div class="panel-header"><i class="fa-solid fa-microscope"></i> Exámenes y Procedimientos</div>
+                            
+                            <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 4px solid var(--warning);">
+                                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 10px;">
+                                    <div>
+                                        <h4 style="margin:0 0 5px 0; color: var(--primary);">Cuadro Hemático Completo</h4>
+                                        <p style="margin:0; font-size:12px; color:var(--text-muted);">Laboratorio Clínico - Ayuno de 8 horas</p>
+                                    </div>
+                                    <span class="status-tag pending" style="margin:0;">Pendiente</span>
+                                </div>
+                                <button class="btn-primary" style="width: 100%; margin-top: 10px; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.getElementById('menu-citas'))"><i class="fa-solid fa-calendar-plus"></i> Agendar Cita Laboratorio</button>
+                            </div>
+
+                            <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; border-left: 4px solid var(--success);">
+                                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                                    <div>
+                                        <h4 style="margin:0 0 5px 0; color: var(--primary);">Electrocardiograma</h4>
+                                        <p style="margin:0; font-size:12px; color:var(--text-muted);">Realizado el 15 Mayo 2026</p>
+                                    </div>
+                                    <span class="status-tag">Resultados Listos</span>
+                                </div>
+                                <button class="btn-primary" style="width: 100%; margin-top: 10px; padding: 8px; font-size: 12px; background: white; color: var(--primary); border: 1px solid var(--primary);" onclick="alert('Descargando resultados del laboratorio...')"><i class="fa-solid fa-eye"></i> Ver Resultados</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="view-citas" class="view-container">
                     <div class="welcome-banner"><h1><i class="fa-solid fa-calendar-check"></i> Gestión de Citas Médicas</h1></div>
-                    
                     <div class="grid-2">
                         <div class="panel-full">
                             <div class="panel-header">Agendar Nueva Cita</div>
                             <div class="form-group">
-                                <label>1. Selecciona Especialidad</label>
+                                <label>1. Selecciona Especialidad o Servicio</label>
                                 <select class="feedback-input" id="cita-esp">
                                     <option value="">Elegir área médica...</option>
                                     <option>Medicina General</option>
                                     <option>Cardiología</option>
                                     <option>Dermatología</option>
                                     <option>Odontología</option>
+                                    <option>Toma de Muestras (Laboratorio)</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -290,7 +385,6 @@
 
                         <div class="panel-full" style="background: #fcfcfc;">
                             <div class="panel-header"><i class="fa-regular fa-clock"></i> Mis Citas Próximas</div>
-                            
                             <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
                                 <div>
                                     <h4 style="margin:0 0 5px 0; color: var(--primary);">Dr. Roberto Méndez</h4>
@@ -301,7 +395,6 @@
                                     <div style="color: var(--primary-light); font-size: 13px;">09:30 AM</div>
                                 </div>
                             </div>
-
                             <div style="background: white; border: 1px solid #eee; border-radius: 8px; padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
                                 <div>
                                     <h4 style="margin:0 0 5px 0; color: var(--primary);">Dra. Ana Silva</h4>
@@ -312,6 +405,102 @@
                                     <div style="color: var(--primary-light); font-size: 13px;">04:00 PM</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-calculadora" class="view-container">
+                    <div class="welcome-banner"><h1><i class="fa-solid fa-calculator"></i> Calculadora de Salud e IMC</h1></div>
+                    
+                    <div class="grid-2">
+                        <div class="panel-full">
+                            <div class="panel-header">Ingresa tus Medidas</div>
+                            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">El Índice de Masa Corporal (IMC) es un indicador confiable de la gordura y se usa para identificar categorías de peso que pueden llevar a problemas de salud.</p>
+                            <div class="grid-2" style="margin-bottom: 15px;">
+                                <div class="form-group">
+                                    <label>Peso (en Kilogramos)</label>
+                                    <input type="number" id="imc-peso" class="feedback-input" placeholder="Ej. 72">
+                                </div>
+                                <div class="form-group">
+                                    <label>Altura (en Centímetros)</label>
+                                    <input type="number" id="imc-altura" class="feedback-input" placeholder="Ej. 175">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Género (Opcional para otros cálculos)</label>
+                                <select class="feedback-input"><option>Femenino</option><option>Masculino</option></select>
+                            </div>
+                            <button class="btn-primary" style="width: 100%; margin-top:10px; font-size: 16px; padding: 15px;" onclick="calcularIMC()"><i class="fa-solid fa-heart-pulse"></i> Analizar mi IMC</button>
+                            <div id="imc-resultado" style="margin-top: 15px; font-weight: bold; font-size: 16px; text-align: center; padding: 15px; border-radius: 8px; background: #f9f9f9; display: none;"></div>
+                        </div>
+
+                        <div class="panel-full">
+                            <div class="panel-header"><i class="fa-solid fa-chart-bar"></i> Tabla de Referencia (OMS)</div>
+                            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5; font-size: 14px;">
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;"><span>Menos de 18.5</span> <strong style="color: var(--warning);">Bajo Peso</strong></li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; background: #f0fdf4; padding: 0 10px; border-radius: 4px;"><span>18.5 - 24.9</span> <strong style="color: var(--success);">Peso Saludable (Normal)</strong></li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;"><span>25.0 - 29.9</span> <strong style="color: var(--warning);">Sobrepeso</strong></li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;"><span>30.0 - 34.9</span> <strong style="color: var(--alert);">Obesidad Clase I</strong></li>
+                                <li style="display: flex; justify-content: space-between;"><span>Más de 35.0</span> <strong style="color: var(--alert);">Obesidad Clase II / III</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-directorio" class="view-container">
+                    <div class="welcome-banner"><h1><i class="fa-solid fa-user-doctor"></i> Directorio Médico y Especialistas</h1></div>
+                    
+                    <div class="panel-full" style="padding: 20px;">
+                        <div style="display: flex; gap: 15px; align-items: flex-end;">
+                            <div class="form-group" style="flex: 2; margin-bottom: 0;">
+                                <label>Buscar Especialidad o Nombre</label>
+                                <input type="text" class="feedback-input" placeholder="Ej. Pediatría, Cardiología, Dr. Méndez...">
+                            </div>
+                            <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Ciudad / Sede</label>
+                                <select class="feedback-input"><option>Todas las sedes</option><option>Sede Norte</option><option>Sede Centro</option></select>
+                            </div>
+                            <button class="btn-primary" style="padding: 12px 25px;"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                        </div>
+                    </div>
+
+                    <h3 style="color: var(--primary); margin-bottom: 20px;">Resultados Destacados</h3>
+                    <div class="grid-3">
+                        <div class="doctor-card">
+                            <img src="https://ui-avatars.com/api/?name=Roberto+Mendez&background=random" class="doc-avatar">
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary);">Dr. Roberto Méndez</h4>
+                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Cardiología General<br><i class="fa-solid fa-location-dot"></i> Sede Norte</p>
+                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.8)</div>
+                            </div>
+                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.getElementById('menu-citas'))">Agendar Cita</button>
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://ui-avatars.com/api/?name=Sofia+Castro&background=random" class="doc-avatar">
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary);">Dra. Sofía Castro</h4>
+                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Pediatría Integral<br><i class="fa-solid fa-location-dot"></i> Sede Centro</p>
+                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> (5.0)</div>
+                            </div>
+                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.getElementById('menu-citas'))">Agendar Cita</button>
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://ui-avatars.com/api/?name=Luis+Hernandez&background=random" class="doc-avatar">
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary);">Dr. Luis Hernández</h4>
+                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Dermatología<br><i class="fa-solid fa-location-dot"></i> Sede Sur</p>
+                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.0)</div>
+                            </div>
+                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.getElementById('menu-citas'))">Agendar Cita</button>
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://ui-avatars.com/api/?name=Elena+Ruiz&background=random" class="doc-avatar">
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary);">Dra. Elena Ruiz</h4>
+                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Nutrición y Dietética<br><i class="fa-solid fa-location-dot"></i> Telemedicina</p>
+                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> (4.9)</div>
+                            </div>
+                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.getElementById('menu-citas'))">Agendar Cita</button>
                         </div>
                     </div>
                 </div>
@@ -354,7 +543,6 @@
 
                 <div id="view-seguros" class="view-container">
                     <div class="welcome-banner"><h1><i class="fa-solid fa-shield-halved"></i> Mi Credencial de Seguro</h1></div>
-                    
                     <div class="grid-2">
                         <div class="insurance-id">
                             <div class="ins-header">
@@ -388,54 +576,94 @@
                     </div>
                 </div>
 
-                <div id="view-recursos" class="view-container">
-                    <div class="welcome-banner"><h1><i class="fa-solid fa-toolbox"></i> Directorio Médico y Herramientas</h1></div>
+                <div id="view-ambulancia" class="view-container">
+                    <div class="welcome-banner" style="background: linear-gradient(135deg, var(--alert), #900020);">
+                        <h1><i class="fa-solid fa-truck-medical"></i> Central de Emergencias y Ambulancias</h1>
+                    </div>
                     
-                    <h3 style="color: var(--primary);">Especialistas Destacados en tu Zona</h3>
-                    <div class="grid-3">
-                        <div class="doctor-card">
-                            <img src="https://ui-avatars.com/api/?name=Roberto+Mendez&background=random" class="doc-avatar">
-                            <div>
-                                <h4 style="margin: 0; color: var(--primary);">Dr. Roberto Méndez</h4>
-                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Cardiología General</p>
-                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.8)</div>
-                            </div>
-                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.querySelectorAll('.menu-item')[1])">Agendar</button>
+                    <div class="grid-2">
+                        <div class="panel-full" style="text-align: center; border: 2px solid var(--alert); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <h2 style="color: var(--alert); margin-top: 0;">BOTÓN DE PÁNICO</h2>
+                            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">Usa este botón solo en caso de emergencia vital. Una unidad médica será despachada a tu ubicación actual inmediatamente.</p>
+                            
+                            <button style="background: var(--alert); color: white; border: none; font-size: 20px; font-weight: bold; padding: 30px; border-radius: 50%; width: 220px; height: 220px; box-shadow: 0 10px 30px rgba(214, 34, 70, 0.4); cursor: pointer; transition: transform 0.1s;" 
+                                    onmousedown="this.style.transform='scale(0.95)'" 
+                                    onmouseup="this.style.transform='scale(1)'"
+                                    onmouseleave="this.style.transform='scale(1)'"
+                                    onclick="pedirAmbulancia()">
+                                <i class="fa-solid fa-truck-medical" style="font-size: 50px; display: block; margin-bottom: 10px;"></i>
+                                SOLICITAR AHORA
+                            </button>
                         </div>
-                        <div class="doctor-card">
-                            <img src="https://ui-avatars.com/api/?name=Sofia+Castro&background=random" class="doc-avatar">
-                            <div>
-                                <h4 style="margin: 0; color: var(--primary);">Dra. Sofía Castro</h4>
-                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Pediatría Integral</p>
-                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> (5.0)</div>
+
+                        <div class="panel-full">
+                            <div class="panel-header" style="color: var(--alert); border-bottom-color: rgba(214,34,70,0.1);"><i class="fa-solid fa-location-dot"></i> Detalles del Despacho</div>
+                            <div class="form-group">
+                                <label>Confirmar Dirección Actual</label>
+                                <input type="text" id="amb-direccion" class="feedback-input" value="Calle 123 # 45 - 67, Barrio Centro">
                             </div>
-                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.querySelectorAll('.menu-item')[1])">Agendar</button>
+                            <div class="form-group">
+                                <label>Teléfono de Contacto Rápido</label>
+                                <input type="tel" class="feedback-input" value="+57 300 123 4567">
+                            </div>
+                            <div class="form-group">
+                                <label>Descripción breve de la emergencia (Opcional)</label>
+                                <textarea class="feedback-input" rows="3" style="resize: none;" placeholder="Ej: Dolor agudo en el pecho, dificultad para respirar..."></textarea>
+                            </div>
+                            
+                            <div style="background: #fff4e5; border-left: 4px solid var(--warning); padding: 15px; border-radius: 4px; font-size: 13px; color: var(--text-dark); margin-top: 20px;">
+                                <strong><i class="fa-solid fa-circle-info"></i> Importante:</strong> El mal uso de este servicio (falsas alarmas) puede acarrear cobros en tu próxima factura y sanciones.
+                            </div>
                         </div>
-                        <div class="doctor-card">
-                            <img src="https://ui-avatars.com/api/?name=Luis+Hernandez&background=random" class="doc-avatar">
-                            <div>
-                                <h4 style="margin: 0; color: var(--primary);">Dr. Luis Hernández</h4>
-                                <p style="margin: 5px 0; font-size: 12px; color: var(--text-muted);">Dermatología</p>
-                                <div class="doc-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.0)</div>
+                    </div>
+                </div>
+
+                <div id="view-noticias" class="view-container">
+                    <div class="welcome-banner"><h1><i class="fa-regular fa-newspaper"></i> Portal de Noticias de Salud</h1></div>
+                    
+                    <div class="grid-2">
+                        <div class="panel-full">
+                            <div style="height: 160px; background: linear-gradient(45deg, #01BAEF, #0B4F6C); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px; box-shadow: inset 0 0 20px rgba(0,0,0,0.1);">
+                                <i class="fa-solid fa-syringe"></i>
                             </div>
-                            <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 12px;" onclick="navigate('view-citas', document.querySelectorAll('.menu-item')[1])">Agendar</button>
+                            <h3 style="color: var(--primary); margin-top: 0; margin-bottom: 10px;">Jornada Nacional de Vacunación contra la Influenza</h3>
+                            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">Este fin de semana, todas nuestras sedes estarán aplicando dosis de refuerzo para niños y adultos mayores. No se requiere cita previa para afiliados al plan contributivo. Protege a tu familia esta temporada.</p>
+                            <button class="btn-primary" style="padding: 10px 15px; font-size: 13px; width: 100%;" onclick="alert('Cargando artículo completo...')">Leer artículo completo</button>
+                        </div>
+                        
+                        <div class="panel-full">
+                            <div style="height: 160px; background: linear-gradient(45deg, #129141, #0B4F6C); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px; box-shadow: inset 0 0 20px rgba(0,0,0,0.1);">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 style="color: var(--primary); margin-top: 0; margin-bottom: 10px;">5 Hábitos para Mejorar tu Salud Mental</h3>
+                            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">Descubre cómo pequeñas acciones diarias, como la meditación de 10 minutos, el buen descanso y la desconexión digital, pueden reducir significativamente tus niveles de estrés y ansiedad.</p>
+                            <button class="btn-primary" style="padding: 10px 15px; font-size: 13px; width: 100%; background: var(--success);" onclick="alert('Cargando artículo completo...')">Leer artículo completo</button>
                         </div>
                     </div>
 
-                    <div class="panel-full" style="max-width: 600px; margin: 0 auto;">
-                        <div class="panel-header"><i class="fa-solid fa-calculator"></i> Calculadora de Índice de Masa Corporal (IMC)</div>
-                        <div class="grid-2" style="margin-bottom: 0;">
-                            <div class="form-group">
-                                <label>Peso (Kilogramos)</label>
-                                <input type="number" id="imc-peso" class="feedback-input" placeholder="Ej. 72">
+                    <div class="panel-full">
+                        <div class="panel-header"><i class="fa-solid fa-bullhorn"></i> Anuncios Institucionales WebMED</div>
+                        <div style="display: flex; gap: 20px; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                            <div style="background: var(--bg-color); border: 1px solid #ddd; color: var(--primary); padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; width: 70px;">
+                                <div style="font-size: 24px;">15</div>
+                                <div style="font-size: 11px; text-transform: uppercase;">Mayo</div>
                             </div>
-                            <div class="form-group">
-                                <label>Altura (Centímetros)</label>
-                                <input type="number" id="imc-altura" class="feedback-input" placeholder="Ej. 175">
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: var(--text-dark); font-size: 15px;">Inauguración de la nueva sede Norte Especializada</h4>
+                                <p style="margin: 0; font-size: 13px; color: var(--text-muted);">Más de 20 especialidades nuevas disponibles, laboratorios de última generación y parqueadero gratuito para nuestros usuarios.</p>
                             </div>
                         </div>
-                        <button class="btn-primary" style="width: 100%; margin-top:10px;" onclick="calcularIMC()">Analizar mi IMC</button>
-                        <div id="imc-resultado" style="margin-top: 15px; font-weight: bold; font-size: 16px; text-align: center; padding: 15px; border-radius: 8px; background: #f9f9f9; display: none;"></div>
+
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <div style="background: var(--bg-color); border: 1px solid #ddd; color: var(--primary); padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; width: 70px;">
+                                <div style="font-size: 24px;">02</div>
+                                <div style="font-size: 11px; text-transform: uppercase;">Junio</div>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: var(--text-dark); font-size: 15px;">Actualización importante en el portal de citas web</h4>
+                                <p style="margin: 0; font-size: 13px; color: var(--text-muted);">El sistema estará en mantenimiento desde la 1:00 AM hasta las 4:00 AM. Agradecemos su comprensión mientras mejoramos la plataforma.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -489,6 +717,10 @@
                         <div class="grid-2">
                             <div class="form-group"><label>Nombre Completo</label><input type="text" id="conf-name" class="feedback-input" disabled></div>
                             <div class="form-group"><label>Documento de Identidad</label><input type="text" class="feedback-input" value="1002938475" disabled></div>
+                            
+                            <div class="form-group"><label>Fecha de Nacimiento</label><input type="date" class="feedback-input" value="1990-05-15" disabled></div>
+                            <div class="form-group"><label>Dirección de Residencia</label><input type="text" class="feedback-input" value="Calle 123 # 45 - 67, Barrio Centro"></div>
+                            
                             <div class="form-group"><label>Correo Electrónico</label><input type="email" id="conf-email" class="feedback-input"></div>
                             <div class="form-group"><label>Teléfono Móvil</label><input type="tel" class="feedback-input" value="+57 300 123 4567"></div>
                         </div>
@@ -547,12 +779,26 @@
 
         function procesarRegistro() {
             const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
             if(!name) {
-                alert("⚠️ El nombre es obligatorio para crear la historia clínica.");
+                alert("⚠️ El nombre es obligatorio para crear la cuenta.");
                 return;
             }
-            alert("✅ Cuenta creada. Bienvenido a la red WebMED.");
-            iniciarSistema(name.toUpperCase(), "nuevo@webmed.com");
+            if(email) {
+                document.getElementById('login-email').value = email;
+            }
+            toggleAuth('auth-success');
+        }
+
+        function procesarRecuperacion() {
+            const email = document.getElementById('recovery-email').value;
+            if(!email) {
+                alert("⚠️ Por favor, ingresa tu correo electrónico para buscar tu cuenta.");
+                return;
+            }
+            alert(`✅ Enlace enviado. Revisa la bandeja de entrada o spam de: ${email} para restablecer tu contraseña.`);
+            document.getElementById('recovery-email').value = ""; 
+            toggleAuth('auth-login'); 
         }
 
         function iniciarSistema(nombre, email) {
@@ -573,7 +819,7 @@
                 document.getElementById('app-layout').style.display = 'none';
                 document.getElementById('auth-overlay').style.display = 'flex';
                 document.getElementById('login-pass').value = ""; 
-                navigate('view-inicio', document.querySelectorAll('.menu-item')[0]); 
+                navigate('view-inicio', document.getElementById('menu-inicio')); 
             }
         }
 
@@ -587,7 +833,6 @@
         }
 
         // --- 3. Lógica de Funciones UI ---
-        
         function enviarOpinion() {
             const txt = document.getElementById('feedback-txt').value;
             if(txt) {
@@ -614,13 +859,16 @@
                 alert(`✅ CITA AGENDADA CON ÉXITO\n\nEspecialidad: ${esp}\nFecha: ${fecha}\nHora: ${horaSelect.innerText}\n\nTe llegará un SMS de confirmación.`);
                 document.getElementById('cita-esp').value = "";
                 document.getElementById('cita-fecha').value = "";
-                horaSelect.classList.remove('selected');
+                if(horaSelect) horaSelect.classList.remove('selected');
             }
         }
 
         function pedirAmbulancia() {
-            if(confirm("🚨 BOTÓN DE PÁNICO ACTIVADO\n\n¿Confirmas el envío de una unidad de emergencias a tu dirección de residencia actual?")) {
-                alert("🚑 UNIDAD EN CAMINO.\nPrioridad: ALTA.\nTiempo estimado de llegada: 8 minutos.\nMantén la calma, un operador te llamará en segundos.");
+            const dirInput = document.getElementById('amb-direccion');
+            const direccion = dirInput ? dirInput.value : "tu ubicación actual";
+            
+            if(confirm("🚨 BOTÓN DE PÁNICO ACTIVADO\n\n¿Confirmas el envío de una unidad de emergencias a: " + direccion + "?")) {
+                alert("🚑 UNIDAD EN CAMINO.\n\nPrioridad: ALTA.\nTiempo estimado de llegada: 8 minutos.\n\nMantén la calma, un operador de emergencias te llamará en unos segundos.");
             }
         }
 
@@ -642,10 +890,11 @@
             if(imc < 18.5) { estado = "Bajo peso"; color = "var(--warning)"; }
             else if(imc <= 24.9) { estado = "Peso Saludable"; color = "var(--success)"; }
             else if(imc <= 29.9) { estado = "Sobrepeso"; color = "var(--warning)"; }
-            else { estado = "Obesidad"; color = "var(--alert)"; }
+            else if(imc <= 34.9) { estado = "Obesidad Clase I"; color = "var(--alert)"; }
+            else { estado = "Obesidad Severa (Clase II / III)"; color = "var(--alert)"; }
 
             resultBox.style.display = "block";
-            resultBox.innerHTML = `Índice de Masa Corporal: <span style="color:${color}; font-size:22px;">${imc}</span> <br> <span style="font-weight:normal; font-size:14px;">Clasificación diagnóstica: ${estado}</span>`;
+            resultBox.innerHTML = `Tu IMC es: <span style="color:${color}; font-size:24px;">${imc}</span> <br> <span style="font-weight:normal; font-size:14px; display:inline-block; margin-top:5px;">Diagnóstico: ${estado}</span>`;
         }
 
         function enviarPQRS() {
@@ -663,5 +912,3 @@
     </script>
 </body>
 </html>
-
-
